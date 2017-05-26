@@ -4,7 +4,7 @@
   "description": "Auto generate project template",
   "main": "index.js",
   "bin": {
-    "weex-starter-cli": "./index.js"
+    "weex-starter-cli": "./bin/init.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Roxyhuang/weex-starter-cli/issues"
   },
-  "homepage": "https://github.com/Roxyhuang/weex-starter-cli#readme"
+  "homepage": "https://github.com/Roxyhuang/weex-starter-cli#readme",
+  "dependencies": {
+    "xtoolkit": "^0.2.7"
+  }
 }
