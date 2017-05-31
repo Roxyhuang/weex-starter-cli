@@ -2,6 +2,7 @@ const prompt = require('prompt');
 const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
+const nodegit = require('nodegit');
 exports.generate = function (name) {
   if(typeof(name) == 'undefined') {
     const dirname = path.resolve('.').split(path.sep).pop();
@@ -11,8 +12,17 @@ exports.generate = function (name) {
     }
     const dirpath = process.cwd();
     let projectName = result.name.toLocaleLowerCase() === 'y' ? dirname : result.name;
-    copy(projectName,dirpath);
-    replace(projectName,dirpath);
+    var url = "https://github.com/Roxyhuang/weex-starter-kit.git",
+        local = dirpath,
+        cloneOpts = {};
+    console.log("Cloning into 'weex-starter-kit'...");
+    nodegit.Clone(url, local, cloneOpts).then(function (repo) {
+      // copy(projectName,dirpath);
+      replace(projectName,dirpath);
+      console.log("Cloned " + path.basename(url) + " to " + repo.workdir());
+    }).catch(function (err) {
+      console.log(err);
+    });
   })
 
   } else {
@@ -54,8 +64,17 @@ function createProject(name, dirpath) {
         console.error(err)
       }
     } else {
-      copy(name,dirpath);
-      replace(name,dirpath);
+      var url = "https://github.com/Roxyhuang/weex-starter-kit.git",
+          local = dirpath,
+          cloneOpts = {};
+
+      nodegit.Clone(url, local, cloneOpts).then(function (repo) {
+        // copy(name,dirpath);
+        replace(name,dirpath);
+        console.log("Cloned " + path.basename(url) + " to " + repo.workdir());
+      }).catch(function (err) {
+        console.log(err);
+      });
     }
   });
 }
