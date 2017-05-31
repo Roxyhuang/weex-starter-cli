@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-var xtoolkit = require('xtoolkit');
-xtoolkit.command('init','local:../task/starter-init.js');
-xtoolkit.version(require('../package.json').version);
+// generator an template
+const yargs = require('yargs');
+const argv = yargs.argv;
+
+const generator = require('../task/generator');
+
+generator.generate(argv._[0]);

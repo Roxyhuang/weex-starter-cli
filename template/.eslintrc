@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "globals": {
+    "Vue": false
+  },
+  "extends": "airbnb-base",
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    "no-underscore-dangle": [0],
+    "selector-pseudo-class-no-unknown": [0],
+    "no-undef": [0]
+  }
+}
