@@ -3,6 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const nodegit = require('nodegit');
+
 exports.generate = function (name) {
   if(typeof(name) == 'undefined') {
     const dirname = path.resolve('.').split(path.sep).pop();
