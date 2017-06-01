@@ -28,12 +28,12 @@ weex-starter-cli
 
 ## 目录结构
 
-* `src/*`: 所有Vue相关的源码
+* `src/*`: 所有vue相关的源码
 * `src/init.js`: weex入口文件
 * `build/*`: 构建脚本
 * `dist/*`: 编译后文件目录
 * `iOS/*`:  weex for iOS代码
-* `mock/*`:   mock数据以及express服务器目录
+* `mock/*`: mock数据以及express服务器目录
 * `static/*`: 静态页面目录
 * `index.html`: 渲染模版页面
 * `.babelrc`: babel配置文件
@@ -43,18 +43,18 @@ weex-starter-cli
 ## npm脚本
 
 ```bash
-# build both two js bundles for Weex and Web
+# 运行开发环境
 npm run dev
 
-# build the two js bundles and watch file changes
+# 编译开发环境
 npm run build:dev
 
-# start a Web server at 8080 port
+# 编译qa环境
 npm run build:qa
 
-# start weex-devtool for debugging with native
+# 环境生产
 npm run build:prod
 
-# start weex-devtool for debugging with native
+# 运行api服务器
 npm run serve
 ```
