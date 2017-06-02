@@ -1,6 +1,6 @@
 # weex-starter-cli
 
-> weex-starter-kit
+> # weex-starter-cli
 
 ## Install Cli
 

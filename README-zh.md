@@ -1,6 +1,6 @@
 # weex-starter-cli
 
-> weex-starter-kit 是一个可以快速构建weex项目的脚手架工具
+> # weex-starter-cli 是一个可以快速构建weex项目的脚手架工具
 
 ## 安装脚手架
 
